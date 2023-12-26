@@ -1,13 +1,15 @@
 from typing import List
 
 class Solution:
+    # not used to this syntax, took a while to understand it
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        complete_dict = {}
+        num_dict = {}
+        # finding the enumerate fucntion took forever, but was what i was looking for
         for i, num in enumerate(nums):
-            complement = target - num
-            if complement in complete_dict:
-                return [complete_dict[complement], i]
-            complete_dict[num] = i
+            numList = target - num
+            if numList in num_dict:
+                return [num_dict[numList], i]
+            num_dict[num] = i
         return []
 
 
